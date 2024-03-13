@@ -10,7 +10,7 @@ Feature: First Cypress Test
     Then I should see element ".title.page-title" with text "gaurav.garg"
 
   @preview @dev @stg
-  Scenario Outline: TC_02_03 - Ensure the accordion has expand all/collapse all toggle button and works as expected.
+  Scenario Outline: TC_02_03 - Ensure the user goes to page and see the content.
     Given I visit the <url> url
     Then I should see element ".node__title a span" with text "The Power of Storytelling: Connecting Through Narratives"
     And I should see element ".view-content"
