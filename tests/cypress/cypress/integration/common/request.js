@@ -11,3 +11,10 @@ Then('I should see element {string} with text {string}', (element, text) => {
 Then('I should see element {string}', (element) => {
   cy.get(element).should('be.visible');
 });
+
+Given('I login using {string}', (user) => {
+  cy.visit('/user/login');
+  cy.get('#edit-name').type(user);
+  cy.get('#edit-pass').type(user);
+  cy.get('#edit-submit').click();
+});
